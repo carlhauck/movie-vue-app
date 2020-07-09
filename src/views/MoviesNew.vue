@@ -21,6 +21,8 @@
       <div class="form-group">
         <label>Plot:</label>
         <input type="text" class="form-control" v-model="plot">
+        <small v-show="plot.length > 0 && plot.length <= 200">{{ 200 - plot.length }} characters remaining</small>
+        <small class = "text-danger" v-show="plot.length > 200">{{ plot.length - 200 }} characters over limit</small>
       </div>
       <input type="submit" class="btn btn-primary" value="Create">
     </form>
