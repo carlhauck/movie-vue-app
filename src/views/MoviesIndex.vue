@@ -1,4 +1,5 @@
 <template>
+
   <div class="movies-index">
     Search by title: <input v-model="titleFilter" list="titles">
     <datalist id="titles">
